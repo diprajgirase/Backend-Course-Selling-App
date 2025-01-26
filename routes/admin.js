@@ -1,21 +1,16 @@
-const { Router } = require("express")
+const { Router } = require("express")        
 const adminRouter = Router();
+const {adminModel} = require("../db")
 
-admin Router.post('/signin', (req, res) => {
-    res.send({
-        message: "signin endpoint"
+adminRouter.post("/signup", function(req, res){      //ab userRouter bana chuke hai aur routing kiye hai toh we don't have access of app so userRouter use krenge uske jgah pe 
+    res.json({
+        message: "Signup endpoint"
     })
 })
 
-adminRouter.get('/signup', (req, res) => {
-    res.send({
-        message: "signup endpoint"
-    })
-})
-
-adminRouter.post('/courses', (req, res) => {
-    res.send({
-        message: "signup endpoint"
+adminRouter.post("/signin", function(req, res){
+    res.json({
+        message: "Signup endpoint"
     })
 })
 
