@@ -1,7 +1,7 @@
 const { Router } = require("express")        
 const adminRouter = Router();
 const {adminModel} = require("../db")
-
+const {JWT_ADMIN_PASSWORD} = require("../config")
 // add three dependencies - bcrypt,zod,jwtTokens
 
 

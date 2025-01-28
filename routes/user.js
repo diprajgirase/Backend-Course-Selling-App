@@ -1,7 +1,7 @@
 const { Router } = require("express")
 const { userModel } = require("../db");
 const jwt = require("jsonwebtoken");
-const JWR_USER_PASSWORD = "alad1231"
+const {JWT_USER_PASSWORD} = require("../config")
 
 const userRouter = Router();
 
@@ -23,7 +23,7 @@ userRouter.post('/signup', async (req, res) => {
 userRouter.post('/signin', async (req, res) => {
     const { email, password } = req.body
 
-    await userModel.find({
+    await userModel.findOne({
         email,
         password
     })
